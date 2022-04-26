@@ -1,1 +1,0 @@
-(()=>{var r={550:r=>{r.exports={square:r=>r*r,sum:(r,s)=>r+s}}},s={};function e(o){var t=s[o];if(void 0!==t)return t.exports;var u=s[o]={exports:{}};return r[o](u,u.exports,e),u.exports}(()=>{const r=e(550);console.log("square",r.square(20),r.sum(10,10))})()})();
