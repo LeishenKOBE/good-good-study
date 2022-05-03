@@ -1,11 +1,10 @@
+from gevent.queue import Queue
+import csv
+import bs4
+import requests
+import gevent
 from gevent import monkey
 monkey.patch_all()
-
-import gevent
-import requests
-import bs4
-import csv
-from gevent.queue import Queue
 
 
 work = Queue()
