@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import "lib-flexible/flexible";
-import App from "./App";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from "react-router-dom"
+import 'lib-flexible/flexible'
+import './index.css'
+import App from './App'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+  document.getElementById('root')
+)

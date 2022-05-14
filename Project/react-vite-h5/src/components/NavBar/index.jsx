@@ -1,25 +1,21 @@
-import React, { useState } from "react";
-import { TabBar } from "zarm";
-import { useNavigate } from "react-router-dom";
-import CustomIcon from "../CustomIcon";
-import s from "./style.module.less";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types'
+import { TabBar } from 'zarm';
+import { useHistory } from 'react-router-dom';
+import CustomIcon from '../CustomIcon'
+import s from './style.module.less';
 
 const NavBar = ({ showNav }) => {
-  const [activeKey, setActiveKey] = useState("/");
-  const navigateTo = useNavigate();
+  const [activeKey, setActiveKey] = useState('/');
+  const history = useHistory()
 
-  const changeTab = (path) => {
-    setActiveKey(path);
-    navigateTo(path);
-  };
+  const chnageTab = (path) => {
+    setActiveKey(path)
+    history.push(path)
+  }
 
   return (
-    <TabBar
-      visible={showNav}
-      className={s.tab}
-      activeKey={activeKey}
-      onChange={changeTab}
-    >
+    <TabBar visible={showNav} className={s.tab} activeKey={activeKey} onChange={chnageTab}>
       <TabBar.Item
         itemKey="/"
         title="账单"
@@ -38,5 +34,9 @@ const NavBar = ({ showNav }) => {
     </TabBar>
   );
 };
+
+NavBar.propTypes = {
+  showNav: PropTypes.bool
+}
 
 export default NavBar;
