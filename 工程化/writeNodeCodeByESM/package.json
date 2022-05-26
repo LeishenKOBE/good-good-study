@@ -1,0 +1,48 @@
+{
+  "name": "writenodecodebyesm",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -x babel-node src/index.js",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "dev"
+    },
+    "execMap": {
+      "js": "node --harmony"
+    },
+    "ext": "js json",
+    "ignore": [
+      "dist/"
+    ],
+    "watch": [
+      "src/"
+    ]
+  },
+  "engines": {
+    "node": ">=13.2.0",
+    "npm": ">=6.13.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.12",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.12",
+    "nodemon": "^2.0.16",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
